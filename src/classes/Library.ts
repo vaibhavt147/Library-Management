@@ -15,7 +15,7 @@ export class Library {
     return Library.instance;
   }
 
-  constructor() {
+  private constructor() {
     this.books = new Map();
     this.users = new Map();
     this.borrowRecords = new Map();
