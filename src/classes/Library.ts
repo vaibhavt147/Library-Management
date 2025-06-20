@@ -3,9 +3,17 @@ import { BorrowRecord } from "./BorrowRecord";
 import { User } from "./User";
 
 export class Library {
+  private static instance: Library;
   private books: Map<number, Book>;
   private users: Map<number, User>;
   private borrowRecords: Map<number, BorrowRecord>;
+
+  public static getInstance() {
+    if (!Library.instance) {
+      Library.instance = new Library();
+    }
+    return Library.instance;
+  }
 
   constructor() {
     this.books = new Map();

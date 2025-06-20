@@ -4,7 +4,7 @@ import { Book } from "./classes/Book";
 import { Library } from "./classes/Library";
 import { User } from "./classes/User";
 
-const library = new Library();
+const library = Library.getInstance();
 
 // --- Register Users ---
 const alice = new User("Alice");
